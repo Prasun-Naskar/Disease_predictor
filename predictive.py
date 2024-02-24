@@ -64,7 +64,7 @@ if (selected == 'Diabetes Prediction'):
 
     if st.button('Diabetes Test Result'):
         diab_prediction = diabetes_model.predict(
-            [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+            [[Pregnancies, Glucose_level, BloodPressure, SkinThickness, Insulin_level, BMI, DiabetesPedigreeFunction, Age]])
 
         if (diab_prediction[0] == 1):
             diab_diagnosis = 'The person is diabetic'
@@ -127,7 +127,7 @@ if (selected == 'Heart Disease Prediction'):
 
     if st.button('Heart Disease Test Result'):
         heart_prediction = heart_disease_model.predict(
-            [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
+            [[age, sex, chest_pain_type, Resting_Blood_Pressure, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
 
         if (heart_prediction[0] == 1):
             heart_diagnosis = 'The person is having heart disease'
